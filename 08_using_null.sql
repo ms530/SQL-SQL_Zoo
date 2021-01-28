@@ -54,10 +54,13 @@ FROM teacher
 
 -- 10. Use CASE to show the name of each teacher followed by 'Sci' if the
 -- teacher is in dept 1 or 2 show 'Art' if the dept is 3 and 'None' otherwise.
-SELECT teacher.name,
-  CASE
-    WHEN dept IS NULL THEN 'None'
-    WHEN dept = 3 THEN 'Sci'
-    ELSE 'Sci'
-  END AS dept_type
-FROM teacher
+Select name,
+CASE
+ WHEN dept = 1 THEN 'Sci'
+ WHEN dept = 2 THEN 'Sci'
+ WHEN dept = 3 THEN 'Art'
+ ELSE 'None'
+end
+from teacher
+
+
